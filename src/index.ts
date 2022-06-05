@@ -1,9 +1,39 @@
 import "./styles.css";
+function cargarArreglo(butacasArreglo: boolean[], dimArreglo: number) {
+  let indice: number;
+  for (indice = 0; indice < dimArreglo; indice++) {
+    butacasArreglo[indice] = Math.random() >= 0.5;
+  }
+}
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>`;
+function mostrarArreglo(butacasArreglo: boolean[], dimArreglo: number) {
+  let indice: number;
+  let linea: string = "";
+  for (indice = 0; indice < dimArreglo; indice++) {
+    linea += ` ${butacasArreglo[indice]}`;
+  }
+  console.log(linea);
+}
+
+function calcularButacasLibres(
+  butacasArreglo: boolean[],
+  dimArreglo: number
+): number {
+  let butacasLibres: number = 0;
+  let indice: number;
+  for (indice = 0; indice < dimArreglo; indice++) {
+    if (butacasArreglo[indice] === false) {
+      butacasLibres += 1;
+    }
+  }
+  return butacasLibres;
+}
+
+//dimensiona el array con el valor introducido por el usuario
+let dimArreglo: number = Number(prompt(`Indique la cantidad de butacas: `));
+let cantidadButacasLibres: number = 0;
+let butacasArreglo: boolean[] = new Array(dimArreglo);
+cargarArreglo(butacasArreglo, dimArreglo);
+mostrarArreglo(butacasArreglo, dimArreglo);
+cantidadButacasLibres = calcularButacasLibres(butacasArreglo, dimArreglo);
+console.log(`La cantidad de butacas libres son: ${cantidadButacasLibres}`);
