@@ -1,5 +1,5 @@
 import "./styles.css";
-//carga arreglo booleano
+//carga arreglo booleano si el mayor o igual a 0.5 es true caso contrario False
 function cargarArreglo(butacasArreglo: boolean[], dimArreglo: number) {
   let indice: number;
   for (indice = 0; indice < dimArreglo; indice++) {
