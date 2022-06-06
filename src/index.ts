@@ -1,4 +1,5 @@
 import "./styles.css";
+//carga arreglo booleano
 function cargarArreglo(butacasArreglo: boolean[], dimArreglo: number) {
   let indice: number;
   for (indice = 0; indice < dimArreglo; indice++) {
