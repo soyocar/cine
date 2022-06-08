@@ -7,7 +7,7 @@ function cargarArreglo(butacasArreglo: boolean[], dimArreglo: number) {
   }
 }
 
-function mostrarArreglo(butacasArreglo: boolean[], dimArreglo: number) {
+function mostrarArreglo(butacasArreglo: boolean[], dimArreglo: number) {// con un console.log es suficiente pero esta bien que lo hagas asi para practicar.
   let indice: number;
   let linea: string = "";
   for (indice = 0; indice < dimArreglo; indice++) {
@@ -38,3 +38,4 @@ cargarArreglo(butacasArreglo, dimArreglo);
 mostrarArreglo(butacasArreglo, dimArreglo);
 cantidadButacasLibres = calcularButacasLibres(butacasArreglo, dimArreglo);
 console.log(`La cantidad de butacas libres son: ${cantidadButacasLibres}`);
+//esta bien tu solucion!
